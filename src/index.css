@@ -1,0 +1,379 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/*font-family: 'Overpass', sans-serif;
+//font-family: 'Ubuntu', sans-serif;*/
+body {
+    height:100vh;
+    font-family: 'Overpass', sans-serif;
+    padding: 20px 100px;
+    overflow-x:hidden;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 115px;
+    width: 100%;
+}
+
+.logo{
+    display: flex;
+    font-size: 40px;
+    justify-content: center;
+    align-items:center;
+    font-weight: 800;
+
+}
+.dropdown {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-arw {
+    margin-left:15px;
+    margin-bottom: 2px;
+}
+
+.product, .company, .connect {
+    position: relative;
+    padding-left: 50px;
+}
+
+.product ul, .company ul, .connect ul {
+    position:absolute;
+    background: white;
+    margin-top: 10px;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
+    transform: translateY(10px);
+}
+
+.product a, .company a, .connect a {
+    color: black;
+    text-decoration: none;
+}
+
+.product li, .company li, .connect li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.product li:hover, .company li:hover, .connect li:hover {
+    background-color: beige;
+}
+
+.dropdown button {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    outline: none;
+}
+
+.dropdown button:hover {
+    color: lightcoral;
+}
+
+
+.product button:focus + ul,
+.company button:focus + ul,
+.connect button:focus + ul{
+    opacity: 1;
+    pointer-events: all;
+    z-index:10;
+}
+
+.acct {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    text-decoration: none;
+    top: 0.5px;
+    right: 0;
+    bottom: 0;
+    margin-right: 200px;
+    font-size: 14px;
+}
+
+.acct a {
+    text-decoration: none;
+    color: white;
+    margin-right: 50px;
+}
+
+.signup-btn {
+    background-color: white;
+    width: 135px;
+    height: 40px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    box-shadow: 0px 0px 38px 20px rgba(0,0,0,0.05);
+    
+}
+
+.signup-btn a {
+    justify-content: center;
+    align-items: center;
+}
+
+.acct p {
+    color: hsl(356, 100%, 66%);
+    font-weight: 800;
+}
+
+.header-gfx {
+    background: linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%) );
+    position: absolute;
+    height: 450px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -5;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 0 100px;
+}
+.header-gfx  img{
+    position: relative;
+    width:2500px;
+    margin-top: 0;
+    margin-left: 600px;;
+}
+
+
+.hero {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 315px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.hero h2 {
+    color: white;
+    margin-top: -50px;
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.cta {
+  display: flex;
+  flex-direction: row;  
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.cta-btn {
+    width: 135px;
+    height: 40px;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: pointer;
+}
+
+.learn-more {
+    border-style: solid;
+    border-width: 1px;
+    margin-left: 10px;
+}
+.start-for-free {
+    background-color: white;
+    color:  hsl(356, 100%, 66%);
+    font-weight: 800;
+}
+
+.future-panel {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    
+}
+
+.future-panel-title {
+    width: 100%;
+    display: flex;;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.future-panel-body {
+    max-width:1400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  
+}
+
+.future-panel-copy {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    line-height: 35px;
+    max-width: 500px;
+
+}
+
+.future-panel-title h1 {
+    color:hsl(237, 23%, 32%);
+}
+
+.future-panel-copy h2 {
+    margin-top: 70px;
+    color:hsl(237, 23%, 32%);
+}
+.future-panel-copy p {
+    margin-top: 20px;
+    color:hsl(237, 23%, 32%);
+}
+
+.future-panel-gfx {
+    position:relative;
+    width: 50%;
+    
+
+}
+
+.future-panel-gfx img {
+    width: 750px;
+    height: 750px;
+    left: 200px;
+    top: 0;
+    z-index: 10;
+    position:relative;
+    
+}
+
+.state-of-art-panel {
+    height: 700px;
+    position: absolute;
+    width: 100%;
+    top: 1348px;
+    left: 0;
+    z-index: -5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.state-of-art-slim-rounded {
+    height:60%;
+    width:100%;
+    background: linear-gradient(to right, hsl(237, 17%, 21%), hsl(237, 23%, 32%) ); 
+    border-radius: 0px 125px 0px 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    z-index: -2;
+}
+
+.state-of-art-slim-rounded img {
+
+    margin-top: 20px;
+    width: 100%;
+    z-index: 1;
+}
+
+.state-of-art-copy {
+    display:flex;
+    align-items: left;
+    justify-content: center;
+    flex-direction: column;
+    height: 300px;
+    max-width: 500px;
+    color: white;
+    line-height:30px;
+    position: relative;
+    margin-left: 100px;
+}
+
+.state-of-art-copy p {
+    margin-top: 30px;
+
+}
+
+.state-of-art-gfx {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 60%;
+    border-radius: 0px 125px 0px 125px;
+    overflow:hidden;
+    
+}
+
+.state-of-art-gfx img {
+    position: relative;
+    top: -550px;
+    left: -15%;
+    width: 1000px;
+}
+
+
+.free-panel {
+    display: flex;
+    position: absolute;
+    top: 2050px;
+    height: 700px;
+    flex-direction: row;
+}
+
+.free-panel-gfx {
+    position: relative;
+    left: 0px;
+    width: 50%;
+
+}
+
+.free-panel-gfx img {
+    width: 500px;
+    position: absolute;
+    left: -390px;
+}
+
+.free-panel-copy {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
